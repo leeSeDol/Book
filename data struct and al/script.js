@@ -37,7 +37,7 @@ window.onload=function(){
 	if(position2>=0){
 		alert("found first:"+name+" at position:"+position2+" is: "+names[position2]);
 	}
-*/
+
 	//数组的字符串表示
 	var names=["David","Cynthia","Raymond","drink","spit","drink","Raymond","Cynthia","David"];
 	var namestr=names.join("/");
@@ -45,4 +45,39 @@ window.onload=function(){
 	namestr =names.toString();
 	console.log(namestr);
 
+		//由已有的数组创建新的数组
+	var cisDept = ["Mike","Clayton","Terrill","Danny","Jennifer"];
+	var dmpDept = ["Raymond","Cynthia","Bryan"];
+	var itDiv = cisDept.concat(dmpDept);
+	console.log(itDiv);
+	itDiv=dmpDept.concat(cisDept);
+	console.log(itDiv);
+
+	var itDiv=["Raymond","Cynthia","Bryan","Mike","Clayton","Terrill","Danny","Jennifer"];
+	itDiv.splice(3,0,"yellow","blue");
+	console.log(itDiv);
+
+	//添加或删除数组成员
+	var nums=[1,2,3,4,5];
+	console.log(nums);
+	nums.push(6);
+	console.log(nums);
+	nums[nums.length]=7;
+	console.log(nums);
+	nums.unshift(0);
+	console.log(nums);
+	nums.shift();
+	console.log(nums);
+	nums.pop();
+	console.log(nums);
+
+	//为数组排序
+	var nums=[3,1,2,100,4,200];
+	nums.sort(compare);
+	console.log(nums);
+	function compare(num1,num2){
+		return num1-num2;
+	}*/
+	//迭代器方法
+	var nums=[];
 };

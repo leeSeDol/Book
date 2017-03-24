@@ -77,7 +77,42 @@ window.onload=function(){
 	console.log(nums);
 	function compare(num1,num2){
 		return num1-num2;
-	}*/
+	}
 	//迭代器方法
-	var nums=[];
+	function square(num){
+		console.log(num,num*num);
+	}
+	var nums=[1,2,3,4,5,6,7,8,9,10];
+	nums.forEach(function(number,i){
+		square(number);
+	});
+
+	function isEven(num){
+		return num % 2 == 0; 
+	}
+	var nums=[2,4,6,8,10];
+	var even=nums.every(isEven);
+	if(even){
+		console.log("all numbers are even");
+	}else{
+		console.log("not all numbers are even");
+	}
+
+	function isEven(num){
+		return num % 2 == 0; 
+	}
+	var nums=[1,2,3,4,5,6,7,8,9,10];
+	var even2=nums.some(isEven);
+	if(even2){
+		console.log("some numbers are even");
+	}else{
+		console.log("no numbers are even");
+	}*/
+
+	function add(runningTotal,currentValue){
+		return runningTotal+currentValue;
+	}
+	var nums=[1,2,3,4,5,6,7,8,9,10];
+	var total=nums.reduce(add);
+	console.log(total);
 };

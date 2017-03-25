@@ -107,7 +107,7 @@ window.onload=function(){
 		console.log("some numbers are even");
 	}else{
 		console.log("no numbers are even");
-	}*/
+	}
 
 	function add(runningTotal,currentValue){
 		return runningTotal+currentValue;
@@ -115,4 +115,51 @@ window.onload=function(){
 	var nums=[1,2,3,4,5,6,7,8,9,10];
 	var total=nums.reduce(add);
 	console.log(total);
+	function concat(accumulatedString,item){
+		return accumulatedString+item;
+	}
+	var words=["the ","quick ","brown ","fox "];
+	var sentence = words.reduce(concat);
+	console.log(sentence);
+	var sentence2 = words.reduceRight(concat);
+	console.log(sentence2);
+	//迭代器方法(生成新数组)
+	//map方法
+	function curve(grade){
+		return grade+=5;
+	}
+	var grades=[77,65,81,92,83];
+	var newGrades=grades.map(curve);
+	console.log(newGrades);
+	function first(word){
+		return word[0];
+	}
+	var words=["for","your","information"];
+	var acronym=words.map(first);
+	console.log(acronym.join(""));
+	//filter方法
+	function isEven(num){
+		return num % 2 == 0;
+	}
+	function isOdd(num){
+		return num % 2 == 1;
+	}
+	var nums=[];
+	for(var i=0;i<20;i++){
+		nums[i] = i + 1;
+	}
+	var evens=nums.filter(isEven);
+	var odds=nums.filter(isOdd);
+	console.log(evens);
+	console.log(odds);*/
+	function passing(num){
+		return num>=60;
+	}
+	var grades=[];
+	for(var i=0;i<100;i++){
+		grades[i]=Math.floor(Math.random()*101);
+	}
+	var passGrades=grades.filter(passing);
+	console.log(grades);
+	console.log(passGrades);
 };

@@ -151,7 +151,7 @@ window.onload=function(){
 	var evens=nums.filter(isEven);
 	var odds=nums.filter(isOdd);
 	console.log(evens);
-	console.log(odds);*/
+	console.log(odds);
 	function passing(num){
 		return num>=60;
 	}

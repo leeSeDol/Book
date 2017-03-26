@@ -162,4 +162,36 @@ window.onload=function(){
 	var passGrades=grades.filter(passing);
 	console.log(grades);
 	console.log(passGrades);
+	//filter方法
+	function afterc(str){
+		if(str.indexOf("cie")>-1){
+			return true;
+		}
+		return false;
+	}
+	var words=["recieve","deceive","percieve","deceit","concieve"];
+	var misspelled = words.filter(afterc);
+	console.log(misspelled);
+	//二维数组
+	var twod=[];
+	var rows=5;
+	for(var i=0;i<rows;i++){
+		twod[i]=[];
+	}
+	console.log(twod[0][0]);
+	//另一种创建二维数组的方法
+	Array.matrix=function(numrows,numcols,initial){
+		var arr=[];
+		for(var i=0;i<numrows;i++){
+			var columns=[];
+			for(var j=0;j<numcols;j++){
+				columns[j]=initial;
+			}
+			arr[i]=columns;
+		}
+		return arr;
+	}
+	var nums=Array.matrix(5,5,0);
+	console.log(nums);*/
+	//处理二维数组中的元素
 };

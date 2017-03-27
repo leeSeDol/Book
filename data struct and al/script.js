@@ -218,7 +218,7 @@ window.onload=function(){
 		console.log("Student "+parseInt(row+1)+" average: "+average.toFixed(2)+" total: "+parseInt(total));
 		total=0;
 		average=0.0;
-	}*/
+	}
 	//对象数组
 	function Point(x,y){
 		this.x=x;
@@ -265,9 +265,9 @@ window.onload=function(){
 	thisWeek.add(50);
 	thisWeek.add(52);
 	thisWeek.add(49);
-	console.log(thisWeek.average());
+	console.log(thisWeek.average());*/	
 	
-		//实现列表类
+	//实现列表类
 	function List(){
 		this.listSize=0;
 		this.pos=0;

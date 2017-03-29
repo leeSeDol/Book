@@ -337,4 +337,57 @@ window.onload=function(){
 		this.dataStore.length=0;
 		this.listSize=list.pos=0;
 	}
+		//判断给定值是否在列表中
+	function contains(element){
+		for(var i=0;i<this.dataStore.length;i++){
+			if( this.dataStore[i] == element ){
+				return true;
+			}
+		}
+		return false;
+	}
+	//遍历列表
+	function front(){
+		this.pos=0;
+	}
+	function end(){
+		this.pos = this.listSize-1;
+	}
+	function prev(){
+		if(this.pos > 0){
+			--this.pos;
+		}
+	}
+	function next(){
+		if(this.pos <this.listSize-1){
+			++this.pos;
+		}
+	}
+	function currPos(){
+		return this.pos;
+	}
+	function moveTo(position){
+		this.pos = position;
+	}
+	function getElement(){
+		return this.dataStore[this.pos];
+	}
+	var names = new List();
+	names.append("Clayton");
+	names.append("Raymond");
+	names.append("Cynthia");
+	names.append("Jennifer");
+	names.append("Bryan");
+	names.append("Danny");
+	names.front();
+	console.log(names.getElement());
+	names.next();
+	console.log(names.getElement());
+	names.next();
+	names.next();
+	names.prev();
+	console.log(names.getElement());
+	/*for(names.front();names.currPos() < names.length();names.next()){
+		console.log(names.getElement());
+	}*/
 };

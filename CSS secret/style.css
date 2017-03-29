@@ -1,0 +1,37 @@
+/* *{
+	padding:0;
+	margin:0;
+} */
+button{
+	/* padding:6px 16px; */
+	padding:0.3em 0.8em;
+	border:1px solid #58a;
+	border-width:10px;
+	border-left-width:0;
+	background:#58a linear-gradient(#7ab,#58a);
+	border-radius:0.2em;
+	color:white;
+	text-shadow:0 -0.05em 0.05em #335166;
+	font-size:125%;
+	line-height:1.5;
+}
+button:hover{
+	/* box-shadow:0 1px 5px gray; */
+	box-shadow:0 0.05em 0.25em gray;
+	cursor:pointer;
+}
+button.ok{
+	border-color:#6b0;
+	background:#6b0;
+}
+button.cancel{
+	border-color:#e4393c;
+	background:#e4393c;
+}
+p.pink{
+	color:#fc0;
+}
+hr{
+	height:0.05em;
+	background: #fc0;
+}

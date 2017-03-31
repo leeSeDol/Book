@@ -49,4 +49,23 @@ window.onload=function(){
 	if(div.classList.contains("bd")&&div.classList.contains("user")){
 		alert("have");
 	}
+	var button = document.getElementById("myButton");
+	button.focus();
+	console.log(document.activeElement === button);
+	console.log(document.hasFocus());
+	if( document.readyState == "complete" ){
+		console.log("the document has complete");
+	}
+	document.compatMode = "BackCompat";
+	if( document.compatMode == "CSS1Compat" ){
+		console.log("Standards mode");
+	}else if(document.compatMode == "BackCompat"){
+		console.log("Quirks mode");
+	}
+	var head = document.head || document.getElementsByTagName("head")[0];
+	console.log(document.charset);
+	//document.charset="UTF-8";
+	if(document.charset != document.defaultCharset){
+		console.log("Custom character set being used.");
+	}
 };

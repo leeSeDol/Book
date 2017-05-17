@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		#id-div-fade{
+			background-color: #e43;
+		}
+	</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<button id="id-button-fadeToggle">切换效果</button>
+	<div id="id-div-fade">
+		<p>这里js控制的两个数值</p>
+		<p>1.第一个为淡入时间</p>
+		<p>2.第二个为淡出时间</p>
+	</div>
+<script>
+;(function($){
+	$("#id-button-fadeToggle").click(function(){
+		$("#id-div-fade").fadeToggle(300);
+		$("#id-div-fade").fadeToggle(300);
+		$("#id-div-fade").fadeTo(100,0.6,function(){
+			alert("");
+		});
+	});
+})(jQuery);
+</script>
+</body>
+</html>

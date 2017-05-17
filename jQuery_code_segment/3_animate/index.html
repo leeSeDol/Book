@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+	div{
+		background: #98bf21;
+		height:60px;
+		width:100px;
+		position:absolute;
+		text-align:center;
+	}
+</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<h2 id="h2-caption">炒鸡实用的jquery代码段</h2>
+	<hr><br>
+	<button>开始动画</button>
+	<div></div>
+
+<script>
+;(function($){
+	$("button").click(function(){
+		$("div").animate({
+			left:'350px'
+		});
+	});
+})(jQuery);
+</script>
+</body>
+</html>

@@ -23,9 +23,14 @@
 <script>
 ;(function($){
 	$("button").click(function(){
-		$("div").animate({
+		var div=$("div");
+		div.animate({
 			left:'350px'
 		});
+		div.animate({height:'350px',opacity:'0.6'},"slow");
+		div.animate({width:'350px',opacity:'0.8'},"slow");
+		div.animate({height:'150px',opacity:'0.6'},"slow");
+		div.animate({width:'150px',opacity:'0.8'},"slow");
 	});
 })(jQuery);
 </script>

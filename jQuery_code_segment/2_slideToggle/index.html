@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+	.help h3{
+		background-color: #fc0;
+	}
+	.cssDiv:nth-child(2){
+		background-color: pink;
+	}
+	.cssDiv:nth-child(3){
+		background-color: #08b;
+	}
+</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<div class="help">
+		<h3>button</h3>
+		<div class="cssDiv">1</div>
+		<div class="cssDiv">2</div>
+	</div>
+
+<script>
+;(function($){
+	$(".help h3").click(function(){
+		$(this).next(".cssDiv").slideToggle("fast");
+		$(this).next(".cssDiv").next(".cssDiv").slideToggle("fast");
+	});
+})(jQuery);
+</script>
+</body>
+</html>

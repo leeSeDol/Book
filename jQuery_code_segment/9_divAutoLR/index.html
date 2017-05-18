@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>divAutoLR</title>
+<style>
+	#left{
+		background-color: pink;
+		width:100px;
+		float:left;
+	}
+	#right{
+		background-color: #08b;
+		width:200px;
+		float:left;
+	}
+</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<div id="left">
+		<div style="padding:10px;">
+			<p>左侧页面</p>
+		</div>
+	</div>
+	<div id="right">
+		<div style="padding:10px;">
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+		</div>
+	</div>
+<script type="text/javascript">
+function $(id){
+	return document.getElementById(id);
+}
+function autoHeight(){
+	if( $("left").offsetHeight >= $("right").offsetHeight ){
+		$("right").style.height=$("left").offsetHeight + 'px';
+	}else{
+		$("left").style.height=$("right").offsetHeight + 'px';
+	}
+}
+window.onload=function(){
+	autoHeight();
+};
+</script>
+</body>
+</html>

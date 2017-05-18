@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+	.scrolltoTop{
+		position:absolute;
+		top:300px;
+	}
+	.scrolltoMid{
+		position:absolute;
+		top:800px;
+	}
+	.scrolltoEnd{
+		position:absolute;
+		top:1500px;
+	}
+</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<div class="scrollnav" id="scrollnav">
+		<a href="#" page-scroll="scrolltoTop">滑动到页面顶部</a>
+		<a href="#" page-scroll="scrolltoMid">滑动到页面中部</a>
+		<a href="#" page-scroll="scrolltoEnd">滑动到页面底部</a>
+	</div>
+	<p class="scrolltoTop">页面顶部</p>
+	<p class="scrolltoMid">页面中部</p>
+	<p class="scrolltoEnd">页面底部</p>
+<script>
+;(function($){
+	jQuery.scrollTo=function(scrollDom,scrollTime){
+		scrollDom.click(function(){
+			var scrollToDom=$(this).attr("page-scroll");
+			$('html,body').animate({
+				scrollTop:$("."+scrollToDom).offset().top
+			},scrollTime);
+			return false;
+		});。
+	};
+	$.scrollTo($("#scrollnav a"),1000);
+})(jQuery);
+</script>
+</body>
+</html>

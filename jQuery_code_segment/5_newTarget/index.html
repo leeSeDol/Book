@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style></style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<script>
+;(function($){
+	$(".jqopenurl").attr({target:"_blank"});
+	$('a[rel=ext]').click(function(){
+		$(this).attr({target:"_blank"});
+	});
+	function open(){
+		window.open("http://www.microsoft.com/");
+		window.open("http://www.google.cn/");
+	}
+})(jQuery);
+</script>
+<body>
+	<h2>在新窗口打开链接</h2>
+	<p><a href="http://www.microsoft.com/" class="jqopenurl" title="title">Link to Microsoft</a></p>
+	<p><a href="http://www.google.cn/" rel="ext" title="title">Link to Google</a></p>
+	<form>
+		<input type="button" value="同时打开 Microsoft和Google主页" onclick="open()">
+	</form>
+</body>
+</html>

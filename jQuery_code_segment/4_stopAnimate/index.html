@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+	#panel{
+		display:none;
+	}
+</style>
+<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<button id="stop">停止滑动</button>
+	<div id="filp">单击这里开启向下滑动面板功能</div>
+	<div id="panel">
+		<p>jQuery stop() 用于在动画效果完成</p>
+	</div>
+<script>
+;(function($){
+	$("#filp").click(function(){
+		$("#panel").slideDown(5000);
+	});
+	$("#stop").click(function(){
+		$("#panel").stop();
+	});
+})(jQuery);
+</script>
+</body>
+</html>

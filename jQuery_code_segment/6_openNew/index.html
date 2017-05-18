@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+	
+</style>
+	<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<p><a href="http://www.baidu.com" class="popup" title="title">Force to Open New _blank Window</a></p>
+<script>
+;(function($){
+	$("a.popup").live("click",function(){
+		var forceNewWindow=window.open("http://www.baidu.com","",'width=300,height=200');
+		forceNewWindow.moveTo(500,250);
+		if(window.focus){
+			forceNewWindow.focus();
+		}
+		return function() {};alse;
+	});
+})(jQuery)
+</script>
+</body>
+</html>

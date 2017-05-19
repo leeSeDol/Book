@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<style>
+
+</style>
+<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<p>鼠标当前的坐标：<span></span></p>
+<script>
+$(document).ready(function(){
+	$(document).mousemove(function(e){
+		getClientCoordination(e);
+	});
+});
+function getClientCoordination(e){
+	var x=e.clientX;
+	var y=e.clientY;
+	$("span").text("X:"+x+"Y:"+y);
+}
+</script>
+</body>
+</html>

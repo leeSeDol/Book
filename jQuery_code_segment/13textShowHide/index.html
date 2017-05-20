@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+<script src="../1jQ/jquery.js"></script>
+</head>
+<body>
+	<form action="">
+		<label>搜索框</label>
+		<input type="text" id="id-txtSearch" value="搜索..." title="搜索...">
+	</form>
+
+<script>
+$(document).ready(function(){
+	var vSearchInput=$("#id-txtSearch");
+	vSearchInput.focus(function(){
+		if(vSearchInput.val()==this.title){
+			vSearchInput.val("");
+		}
+	});
+	vSearchInput.blur(function(){
+		if(vSearchInput.val()==""){
+			vSearchInput.val(this.title);
+		}
+	});
+});
+</script>
+</body>
+</html>

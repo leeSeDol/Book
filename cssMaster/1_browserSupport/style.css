@@ -1,0 +1,17 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100vh;
+}
+body{
+	/*  background: linear-gradient(top left);
+	    background: linear-gradient(to bottom right,#e43,#08b); */
+	/* background: linear-gradient(top left,#ff8,#e43); */
+	/* background: linear-gradient(right,#ff8,#e43); */
+	background: linear-gradient( to bottom right ,#31c,#fc0);
+}
+.textshadow{
+	text-shadow:0 0 3px rgba(255,255,255,0.5);
+}

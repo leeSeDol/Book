@@ -1,0 +1,17 @@
+*{
+	margin:0;
+	padding:0;
+}
+.btn{	
+	font-size:20px;
+	padding:6px 16px;
+	width:40px;
+	height:30px;
+	line-height:30px;
+	color:#fff;
+	background: #58a linear-gradient(#77a0bb,#58a);
+	box-shadow: 0 1px 5px gray;
+	text-shadow:0 -1px 3px #000;
+	border-radius:5px;
+	cursor:pointer;
+}

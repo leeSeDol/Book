@@ -1,0 +1,18 @@
+*{
+	margin:0;
+	padding:0;
+}
+/*代码量少和代码易维护不可兼得*/
+#test1{
+	width:100px;
+	height:100px;
+	background-color: #fc0;
+	border-color:#08b;
+	border-style:solid;
+
+	/*该行代码若是想修改需要改动三处*/
+	border-width:10px 10px 10px 0; 
+	/*下面两行代码若是要修改则只需改动一处*/
+	border-width:10px;
+	border-left-width:0;
+}
